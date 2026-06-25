@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>mk体育 · 资料整理与索引说明</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: #f7f4ee;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans', sans-serif;
+      color: #2e2b28;
+      line-height: 1.7;
+      padding: 2.5rem 1.5rem;
+    }
+
+    .wrapper {
+      max-width: 880px;
+      margin: 0 auto;
+      background: #fefcf8;
+      border-radius: 28px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.03), 0 2px 8px rgba(0, 0, 0, 0.02);
+      padding: 2.8rem 2.2rem;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 550;
+      letter-spacing: -0.01em;
+      margin-bottom: 0.25rem;
+      color: #1f1c19;
+      border-left: 6px solid #b7a48b;
+      padding-left: 1rem;
+    }
+
+    .subhead {
+      font-size: 1rem;
+      color: #7a6f65;
+      margin-bottom: 2.2rem;
+      padding-left: 1.6rem;
+    }
+
+    .hero-card {
+      background: #eeebe5;
+      padding: 2rem 2rem 2.2rem 2rem;
+      border-radius: 24px;
+      margin: 2rem 0 2.4rem 0;
+      border: 1px solid #e2d9cf;
+    }
+
+    .hero-card p {
+      font-size: 1.1rem;
+      max-width: 700px;
+    }
+
+    .hero-card strong {
+      color: #4d3e33;
+    }
+
+    .section-title {
+      font-size: 1.3rem;
+      font-weight: 530;
+      margin: 2.4rem 0 0.8rem 0;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: #3d342e;
+    }
+
+    .section-title::before {
+      content: "▍";
+      color: #b7a48b;
+      font-weight: 300;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1.2rem;
+      margin: 1.2rem 0 0.8rem 0;
+    }
+
+    .card {
+      background: #f8f5f0;
+      border-radius: 20px;
+      padding: 1.5rem 1.2rem;
+      border: 1px solid #e9e0d6;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+      transition: box-shadow 0.2s;
+    }
+
+    .card:hover {
+      box-shadow: 0 6px 14px rgba(0,0,0,0.04);
+    }
+
+    .card h3 {
+      font-size: 1.05rem;
+      font-weight: 540;
+      margin-bottom: 0.4rem;
+      color: #4d3e33;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: #4d423b;
+    }
+
+    .callout {
+      background: #f1ece4;
+      border-left: 6px solid #b7a48b;
+      padding: 1.4rem 1.8rem;
+      margin: 2.2rem 0;
+      border-radius: 0 16px 16px 0;
+      font-size: 0.98rem;
+    }
+
+    .callout strong {
+      color: #3d342e;
+    }
+
+    .faq-item {
+      margin: 1.2rem 0;
+      padding: 0.8rem 1.4rem;
+      background: #faf8f4;
+      border-radius: 14px;
+      border: 1px solid #e8dfd4;
+    }
+
+    .faq-item q {
+      font-weight: 500;
+      color: #3d342e;
+    }
+
+    .faq-item p {
+      margin-top: 0.3rem;
+      color: #4d423b;
+      font-size: 0.95rem;
+    }
+
+    .link-sentence {
+      margin: 2.2rem 0 1rem 0;
+      padding: 1.2rem 0;
+      border-top: 1px solid #e5dbd0;
+      border-bottom: 1px solid #e5dbd0;
+    }
+
+    a {
+      color: #7a6047;
+      text-decoration: none;
+      border-bottom: 1px solid #d3c4b6;
+      font-weight: 480;
+      transition: border-color 0.15s, color 0.15s;
+    }
+
+    a:hover {
+      color: #4d3e33;
+      border-bottom-color: #7a6047;
+    }
+
+    .footnote {
+      margin-top: 2.8rem;
+      font-size: 0.9rem;
+      color: #7a6f65;
+      border-top: 1px solid #e5dbd0;
+      padding-top: 1.8rem;
+      text-align: left;
+    }
+
+    @media (max-width: 600px) {
+      body { padding: 1rem; }
+      .wrapper { padding: 1.8rem 1.2rem; }
+      h1 { font-size: 1.7rem; padding-left: 0.8rem; }
+      .hero-card { padding: 1.5rem; }
+      .card-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+<div class="wrapper">
+
+  <h1>mk体育 · 信息索引与资料整理</h1>
+  <div class="subhead">一份有条理的说明页，侧重内容整理与使用场景</div>
+
+  <!-- 主视觉卡片 -->
+  <div class="hero-card">
+    <p><strong>mk体育</strong> 是一个围绕体育资讯、赛事资料与运动知识整理的信息站点。页面以资料卡和索引式板块梳理内容，不堆砌营销话术，只做清晰的呈现。以下为整理后的主要用途、适合人群及常见问题摘要。</p>
+  </div>
+
+  <!-- 用途卡片 -->
+  <div class="section-title">主要用途与内容方向</div>
+  <div class="card-grid">
+    <div class="card">
+      <h3>赛事资料查阅</h3>
+      <p>聚合比赛日程、历史对阵、赛季数据等结构化内容，方便快速浏览与对照。</p>
+    </div>
+    <div class="card">
+      <h3>运动项目概览</h3>
+      <p>涵盖常见运动项目的基本规则、术语解释以及背景介绍，适合入门者参考。</p>
+    </div>
+    <div class="card">
+      <h3>信息整理与索引</h3>
+      <p>以卡片和列表形式梳理体育相关资源，帮助用户建立自己的信息检索路径。</p>
+    </div>
+    <div class="card">
+      <h3>知识类短文</h3>
+      <p>部分页面包含体育文化、赛事冷知识等内容，语气平实，不做标题党。</p>
+    </div>
+  </div>
+
+  <!-- 适合人群 -->
+  <div class="section-title">适合人群</div>
+  <div class="card-grid">
+    <div class="card">
+      <h3>体育数据爱好者</h3>
+      <p>习惯查阅赛事记录、赛季积分、对阵历史的用户，可以按需取用。</p>
+    </div>
+    <div class="card">
+      <h3>运动入门学习者</h3>
+      <p>希望了解某项运动的基本框架、常用术语的读者，内容门槛不高。</p>
+    </div>
+    <div class="card">
+      <h3>日常资讯浏览者</h3>
+      <p>对体育话题有兴趣，但不需要深度分析，偏向于快速了解动态的人。</p>
+    </div>
+    <div class="card">
+      <h3>资料整理型用户</h3>
+      <p>喜欢把信息分类、对比、收藏，作为个人知识库的一部分。</p>
+    </div>
+  </div>
+
+  <!-- 引用块 / 提示框 -->
+  <div class="callout">
+    <strong>提示</strong> · 本页面为资料索引说明页，不提供实时比分或博彩内容。所有信息整理自公开资料，旨在帮助用户更高效地定位自己关心的体育内容。
+  </div>
+
+  <!-- 自然链接段落（嵌入 a 标签） -->
+  <div class="link-sentence">
+    <p>如果你正在寻找一个以赛事资料和运动知识整理为主的站点，可以了解一下 <a href="https://official-mkty.com">mk体育</a>，页面结构偏向卡片式归纳，适合快速浏览和对照查阅。</p>
+  </div>
+
+  <!-- FAQ 摘要 -->
+  <div class="section-title">常见问题摘要</div>
+
+  <div class="faq-item">
+    <q>网站主要提供哪类信息？</q>
+    <p>以体育赛事、运动项目、数据表格和知识短文为主，定位是信息索引与资料整理，不包含直播、投注或实时比分服务。</p>
+  </div>
+  <div class="faq-item">
+    <q>内容更新频率如何？</q>
+    <p>根据赛事周期和资料整理进度不定期更新，不追求日更，但会保证已发布内容的准确性与可读性。</p>
+  </div>
+  <div class="faq-item">
+    <q>是否允许转载或引用？</q>
+    <p>页面内容主要基于公开资料整理，如需引用请注明出处。具体转载政策可参考站内相关说明。</p>
+  </div>
+
+  <!-- 结尾 -->
+  <div class="footnote">
+    本说明页仅作示例，所有信息仅供参考。页面视觉采用米白背景与文章排版，引用块与卡片用于区分信息层级。
+  </div>
+
+</div>
+</body>
+</html>
