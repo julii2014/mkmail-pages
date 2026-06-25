@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>mk体育 · 稳定入口与页面说明</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background: #fafaf9;
+      color: #1c1b1a;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+      line-height: 1.7;
+      padding: 3rem 1.5rem 4rem;
+    }
+    .page {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    /* 文章标题区 */
+    .hero {
+      margin-bottom: 3rem;
+      border-bottom: 1px solid #e5e4e2;
+      padding-bottom: 1.5rem;
+    }
+    .hero h1 {
+      font-size: 2.2rem;
+      font-weight: 550;
+      letter-spacing: -0.02em;
+      margin: 0 0 0.6rem 0;
+      color: #221f1d;
+      line-height: 1.2;
+    }
+    .hero .meta {
+      font-size: 0.85rem;
+      color: #7f7c78;
+      display: flex;
+      gap: 1.2rem;
+      border-top: 1px dashed #ddd;
+      padding-top: 0.8rem;
+      margin-top: 0.3rem;
+    }
+    .hero .meta span {
+      display: inline-block;
+    }
+
+    /* 导语 */
+    .intro {
+      font-size: 1.1rem;
+      background: #f2f1ef;
+      padding: 1.4rem 1.8rem;
+      border-radius: 8px;
+      margin-bottom: 2.4rem;
+      color: #2e2c29;
+    }
+    .intro strong {
+      font-weight: 550;
+      color: #1f1d1b;
+    }
+    .intro a {
+      color: #245c4b;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-thickness: 1.5px;
+      font-weight: 500;
+    }
+    .intro a:hover {
+      color: #163f32;
+      background: #e0dfdb;
+      text-decoration: none;
+      padding: 0 2px;
+      border-radius: 2px;
+    }
+
+    /* 正文段落 */
+    .content p {
+      margin: 1.5rem 0;
+      font-size: 1rem;
+      color: #2b2926;
+    }
+    .content p strong {
+      font-weight: 550;
+    }
+    .content p a {
+      color: #245c4b;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-thickness: 1px;
+      font-weight: 500;
+    }
+    .content p a:hover {
+      background: #e0dfdb;
+      color: #143a2f;
+      text-decoration: none;
+      padding: 0 2px;
+      border-radius: 2px;
+    }
+
+    /* 引用提示块 */
+    .notice {
+      background: #eef1ed;
+      border-left: 5px solid #245c4b;
+      padding: 1.6rem 2rem;
+      margin: 2.8rem 0 2rem;
+      border-radius: 0 8px 8px 0;
+      font-size: 0.98rem;
+      color: #1f2c23;
+    }
+    .notice span {
+      display: block;
+      font-weight: 550;
+      margin-bottom: 0.3rem;
+      color: #1a3e32;
+    }
+
+    /* 特点 / 小卡片列表 */
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      margin: 2.2rem 0;
+    }
+    .features .item {
+      background: #ffffff;
+      border: 1px solid #e7e5e1;
+      border-radius: 10px;
+      padding: 1.2rem 1.4rem;
+      flex: 1 1 180px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+      transition: box-shadow 0.15s, border-color 0.15s;
+    }
+    .features .item:hover {
+      border-color: #b9b4ad;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    }
+    .features .item h3 {
+      font-size: 1rem;
+      font-weight: 550;
+      margin-bottom: 0.4rem;
+      color: #1f1d1b;
+    }
+    .features .item p {
+      font-size: 0.9rem;
+      color: #5b5752;
+      line-height: 1.55;
+      margin: 0;
+    }
+
+    /* FAQ 摘要 */
+    .faq-summary {
+      margin: 2.8rem 0 1.8rem;
+    }
+    .faq-summary h2 {
+      font-size: 1.2rem;
+      font-weight: 550;
+      margin-bottom: 1rem;
+      color: #221f1d;
+      border-bottom: 1px solid #e7e5e1;
+      padding-bottom: 0.3rem;
+    }
+    .faq-item {
+      padding: 0.8rem 0;
+      border-bottom: 1px dashed #e0ddda;
+    }
+    .faq-item:last-of-type {
+      border-bottom: none;
+    }
+    .faq-item .q {
+      font-weight: 500;
+      color: #1e2f27;
+      display: inline;
+    }
+    .faq-item .a {
+      color: #4d4944;
+      display: inline;
+    }
+    .faq-item .a a {
+      color: #245c4b;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      font-weight: 500;
+    }
+    .faq-item .a a:hover {
+      background: #e0dfdb;
+      text-decoration: none;
+    }
+
+    /* 访问句 / 尾注 */
+    .footer-note {
+      margin-top: 3.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #e5e4e2;
+      font-size: 0.92rem;
+      color: #6b6762;
+      text-align: left;
+    }
+    .footer-note a {
+      color: #245c4b;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .footer-note a:hover {
+      background: #e0dfdb;
+      text-decoration: none;
+    }
+
+    /* 响应式 */
+    @media (max-width: 540px) {
+      body { padding: 2rem 1rem 3rem; }
+      .hero h1 { font-size: 1.8rem; }
+      .intro { padding: 1rem 1.2rem; font-size: 1rem; }
+      .features { flex-direction: column; }
+      .features .item { flex: 1 1 auto; }
+      .notice { padding: 1.2rem 1.4rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="hero">
+      <h1>稳定入口与页面说明</h1>
+      <div class="meta">
+        <span>站点 · mk体育</span>
+        <span>索引 · 内容说明</span>
+      </div>
+    </div>
+
+    <div class="intro">
+      <strong>mk体育</strong> 是一个以体育内容为主的页面集合，围绕赛事、训练、观察等话题组织信息。本文是对其稳定入口与页面结构的简要说明，帮助新读者了解如何使用以及可以期待什么。<br>
+      你可以直接访问 <a href="https://mkmail.com.cn">mk体育</a> 查看完整内容。
+    </div>
+
+    <div class="content">
+      <p>
+        很多体育类站点会频繁调整布局或入口，但 <strong>mk体育</strong> 的设计思路更偏向稳定与清晰。页面以内容为核心，没有过多跳转或弹窗干扰。无论是日常浏览还是整理书签，它都适合作为一个固定的起点。
+      </p>
+      <p>
+        从结构上看，<a href="https://mkmail.com.cn">mk体育</a> 主要包含几个固定版块：赛事速报、训练笔记、场地观察和专题整理。每个版块都有独立的文章入口，并且条目按更新时间排列。你可以在同一个域名下找到过去几周甚至几个月的内容，适合长期关注。
+      </p>
+      <p>
+        除了常规的文章列表，部分页面还附带了术语注释或数据表格，方便对比。对于刚接触某类运动的人来说，这些补充信息可以省去额外的搜索时间。
+      </p>
+    </div>
+
+    <div class="features">
+      <div class="item">
+        <h3>固定入口</h3>
+        <p>主域名长期有效，页面结构不随意更改，减少书签失效的麻烦。</p>
+      </div>
+      <div class="item">
+        <h3>清晰归类</h3>
+        <p>赛事、训练、观察三大板块各自独立，找内容更直接。</p>
+      </div>
+      <div class="item">
+        <h3>内容密度</h3>
+        <p>每篇文章有足够的信息量，不靠堆砌标题和缩略图充数。</p>
+      </div>
+    </div>
+
+    <div class="notice">
+      <span>引用提示</span>
+      “一个稳定的入口，比频繁更新的首页更有价值。” —— 如果你正在寻找一个长期可依赖的体育信息页面，<a href="https://mkmail.com.cn">mk体育</a> 值得放入收藏夹。它的内容整理风格偏重实际体验，而非单纯新闻转载。
+    </div>
+
+    <div class="content">
+      <p>
+        关于使用场景：无论是赛前查对手信息、赛后看复盘，还是想了解某项运动的训练方法，<strong>mk体育</strong> 都能提供相对完整的记录。页面没有隐藏的跳转链，所有链接都在同一站点内完成。
+      </p>
+      <p>
+        如果你对某个运动类别不熟悉，可以先从“场地观察”或“训练笔记”入手，那里会包含基础名词解释与常见误区提醒。内容写作者通常会在文章末尾附上参考来源，方便进一步核实。
+      </p>
+    </div>
+
+    <div class="faq-summary">
+      <h2>常见问题 · 摘要</h2>
+      <div class="faq-item">
+        <span class="q">Q：页面内容多久更新一次？</span>
+        <span class="a">A：赛事相关通常在活动结束后 24 小时内更新，训练笔记每周至少一篇。</span>
+      </div>
+      <div class="faq-item">
+        <span class="q">Q：移动端浏览体验如何？</span>
+        <span class="a">A：页面采用窄版式设计，手机阅读无需缩放，图片和表格也会自动适配。</span>
+      </div>
+      <div class="faq-item">
+        <span class="q">Q：想收藏某个具体页面？</span>
+        <span class="a">A：每篇文章都有独立 URL，直接保存即可。首页入口是 <a href="https://mkmail.com.cn">mk体育</a>。</span>
+      </div>
+    </div>
+
+    <div class="footer-note">
+      <p>
+        本文是对现有页面结构的说明，不构成任何承诺。所有内容均基于实际展示整理。<br>
+        如果你觉得这个入口有用，可以随时回到 <a href="https://mkmail.com.cn">mk体育</a> 查看最新文章与归档。
+      </p>
+    </div>
+  </div>
+</body>
+</html>
